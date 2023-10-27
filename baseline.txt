@@ -1,0 +1,66 @@
+baseline models: 
+
+# model_1 acc  train error :0.69 , validation error :0.48 (best reault)
+- ['pickup_longitude', 'pickup_latitude', 'dropoff_longitude',
+       'dropoff_latitude', 'pickup_hour', 'pickup_day', 'pickup_dayofweek',
+       'pickup_month', 'distance_km', 'distance_meters', 'distance_cm']
+
+- degree 10
+
+- StandardScaler
+
+- alpha 1
+
+- seems be there overfiting
+
+----------------------------------------------------------------------
+
+# model_2 acc train: 0.34 , acc test: 0.32 (no overfiting)
+
+- Index(['pickup_longitude', 'pickup_latitude', 'dropoff_longitude',
+       'dropoff_latitude', 'pickup_month', 'pickup_day', 'pickup_hour',
+       'pickup_dayofweek', 'distance'])
+
+- degree 10 
+
+- no Scaler
+
+ 
+
+--------------------------------------------------------------------------
+
+# model_3 acc train: :0.59 , acc test::0.60 (best fit)
+
+- Index(['Unnamed: 0', 'pickup_hour', 'pickup_day', 'pickup_dayofweek',
+       'pickup_month', 'distance_km', 'distance_meters', 'N', 'Y'],
+      dtype='object')
+
+- degree 4 
+
+- alpha 1
+
+- No Scaler
+
+
+
+----------------------------------------------------------------------------
+
+
+# model 4 model train error :0.64 ,  validation error :0.52 (less overfiting)
+
+- (['pickup_longitude', 'pickup_latitude', 'dropoff_longitude',
+       'dropoff_latitude', 'pickup_hour', 'pickup_day', 'pickup_dayofweek',
+       'pickup_month', 'distance_km', 'distance_meters', 'distance_cm'])
+
+- degree 10
+
+- MinMaxScaler
+
+- alpha 1
+  
+-----------------------------------------------------------------
+
+  
+
+
+
