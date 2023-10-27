@@ -1,4 +1,4 @@
-# (NYC-Taxi-Trip-Duration)[https://www.kaggle.com/code/sherif31/new-york-city-taxi-trip-duration]
+# [NYC-Taxi-Trip-Duration](https://www.kaggle.com/code/sherif31/new-york-city-taxi-trip-duration) 
 Its Kaggle challenge  to build a model that predicts the total ride duration of taxi trips in New York City. 
 
 # Project Overview - Trip Duration EDA
