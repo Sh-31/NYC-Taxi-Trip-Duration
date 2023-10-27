@@ -37,4 +37,4 @@ This README file provides a structured overview of a data analysis project focus
 
 - Save the Data: This section suggests saving or preserving the data for future reference or sharing.
 
-- note -> for the dataset you can check kaggle 
+- **Note -> for the dataset you can check kaggle**
