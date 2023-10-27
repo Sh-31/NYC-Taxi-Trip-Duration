@@ -36,3 +36,5 @@ This README file provides a structured overview of a data analysis project focus
 - Modeling: This section might involve building predictive models, such as regression or machine learning models, based on the dataset to make predictions related to trip      duration.
 
 - Save the Data: This section suggests saving or preserving the data for future reference or sharing.
+
+- note -> for the dataset you can check kaggle 
