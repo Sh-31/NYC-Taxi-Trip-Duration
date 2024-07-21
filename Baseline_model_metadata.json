@@ -1,0 +1,65 @@
+{
+    "Best_model": {
+        "train_rmse": 0.4381209389188756,
+        "train_r2": 0.6967244738258442,
+        "test_r2": 0.7154303391634985,
+        "dataset_metadata": {
+            "version": 1,
+            "version_description": "Just removed the infrequent item for categorical data.",
+            "feature_names": [
+                "vendor_id",
+                "pickup_datetime",
+                "passenger_count",
+                "pickup_longitude",
+                "pickup_latitude",
+                "dropoff_longitude",
+                "dropoff_latitude",
+                "store_and_fwd_flag",
+                "trip_duration",
+                "distance_haversine",
+                "direction",
+                "distance_manhattan",
+                "pickup_hour",
+                "pickup_day",
+                "pickup_dayofweek",
+                "pickup_month",
+                "pickup_Season"
+            ],
+            "num_rows_train": 1044917,
+            "num_rows_val": 172105,
+            "num_rows_test": 12294,
+            "outlier_pipeline": [
+                {
+                    "categorical_features": [
+                        "vendor_id",
+                        "passenger_count",
+                        "pickup_hour",
+                        "pickup_day",
+                        "pickup_dayofweek",
+                        "pickup_month",
+                        "pickup_Season",
+                        "store_and_fwd_flag"
+                    ],
+                    "method": "clip",
+                    "threshold": 5
+                }
+            ],
+            "timestamp": "2024-07-20 13:53:10"
+        },
+        "test_rmse": 0.41959838225722174,
+        "selected_feature_names": [
+            "dropoff_longitude",
+            "dropoff_latitude",
+            "distance_haversine",
+            "distance_manhattan",
+            "direction",
+            "passenger_count",
+            "pickup_day",
+            "pickup_month",
+            "pickup_dayofweek",
+            "pickup_hour",
+            "store_and_fwd_flag",
+            "vendor_id"
+        ]
+    }
+}

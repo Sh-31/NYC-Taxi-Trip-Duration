@@ -1,0 +1,27 @@
+{
+    "version": 0,
+    "version_description": "This version have all rows without any outlier removal.",
+    "feature_names": [
+        "vendor_id",
+        "dropoff_datetime",
+        "passenger_count",
+        "pickup_longitude",
+        "pickup_latitude",
+        "dropoff_longitude",
+        "dropoff_latitude",
+        "store_and_fwd_flag",
+        "trip_duration",
+        "distance_haversine",
+        "direction",
+        "distance_manhattan",
+        "pickup_hour",
+        "pickup_day",
+        "pickup_dayofweek",
+        "pickup_month",
+        "pickup_Season"
+    ],
+    "num_rows_train": 1000000,
+    "num_rows_val": 229319,
+    "outlier_pipeline": null,
+    "timestamp": "2024-07-21 08:38:10"
+}

@@ -1,0 +1,12 @@
+
+* Haveing a type of version control for the data or models scores help alot in error analyzing and Verifying assumptions.
+    Such as in this project:
+        - Feature selection seems always helps.
+        - Outlier removal for in trap duration doesn't help.
+        - Increase polynomials degree doesn't help use (seems Nonlinear transformation doesn't help).
+              
+* Because our target in a small scale we need to do transformation equivalent to our feature to help the model learn the target easily
+(We need always to think about transformation can help to learn target easily).
+
+* We can easily do data leakage problems without notice so we need always to have test set keeped away from all we doing.
+

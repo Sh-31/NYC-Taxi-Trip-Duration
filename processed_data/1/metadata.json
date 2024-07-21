@@ -1,0 +1,41 @@
+{
+    "version": 1,
+    "version_description": "Just removed the infrequent item for categorical data.",
+    "feature_names": [
+        "vendor_id",
+        "passenger_count",
+        "pickup_longitude",
+        "pickup_latitude",
+        "dropoff_longitude",
+        "dropoff_latitude",
+        "store_and_fwd_flag",
+        "trip_duration",
+        "distance_haversine",
+        "direction",
+        "distance_manhattan",
+        "pickup_hour",
+        "pickup_day",
+        "pickup_dayofweek",
+        "pickup_month",
+        "pickup_Season"
+    ],
+    "num_rows_train": 999998,
+    "num_rows_val": 229319,
+    "outlier_pipeline": [
+        {
+            "categorical_features": [
+                "vendor_id",
+                "passenger_count",
+                "pickup_hour",
+                "pickup_day",
+                "pickup_dayofweek",
+                "pickup_month",
+                "pickup_Season",
+                "store_and_fwd_flag"
+            ],
+            "method": "clip",
+            "threshold": 5
+        }
+    ],
+    "timestamp": "2024-07-21 04:36:20"
+}
