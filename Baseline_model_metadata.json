@@ -1,11 +1,27 @@
 {
     "Best_model": {
-        "train_rmse": 0.4381209389188756,
-        "train_r2": 0.6967244738258442,
-        "test_r2": 0.7154303391634985,
+        "train_rmse": 0.4380833390085624,
+        "train_r2": 0.6968425490145117,
+        "test_rmse": 0.4422662890485374,
+        "test_r2": 0.6924535751193822,
+        "selected_feature_names": [
+            "dropoff_longitude",
+            "dropoff_latitude",
+            "distance_haversine",
+            "distance_manhattan",
+            "direction",
+            "passenger_count",
+            "pickup_day",
+            "pickup_month",
+            "pickup_Season",
+            "pickup_dayofweek",
+            "pickup_hour",
+            "store_and_fwd_flag",
+            "vendor_id"
+        ],
         "dataset_metadata": {
-            "version": 1,
-            "version_description": "Just removed the infrequent item for categorical data.",
+            "version": 0,
+            "version_description": "This version have all rows without any outlier removal",
             "feature_names": [
                 "vendor_id",
                 "pickup_datetime",
@@ -25,41 +41,11 @@
                 "pickup_month",
                 "pickup_Season"
             ],
-            "num_rows_train": 1044917,
-            "num_rows_val": 172105,
-            "num_rows_test": 12294,
-            "outlier_pipeline": [
-                {
-                    "categorical_features": [
-                        "vendor_id",
-                        "passenger_count",
-                        "pickup_hour",
-                        "pickup_day",
-                        "pickup_dayofweek",
-                        "pickup_month",
-                        "pickup_Season",
-                        "store_and_fwd_flag"
-                    ],
-                    "method": "clip",
-                    "threshold": 5
-                }
-            ],
-            "timestamp": "2024-07-20 13:53:10"
-        },
-        "test_rmse": 0.41959838225722174,
-        "selected_feature_names": [
-            "dropoff_longitude",
-            "dropoff_latitude",
-            "distance_haversine",
-            "distance_manhattan",
-            "direction",
-            "passenger_count",
-            "pickup_day",
-            "pickup_month",
-            "pickup_dayofweek",
-            "pickup_hour",
-            "store_and_fwd_flag",
-            "vendor_id"
-        ]
+            "num_rows_train": 1106387,
+            "num_rows_val": 61466,
+            "num_rows_test": 61466,
+            "outlier_pipeline": null,
+            "timestamp": "2024-07-20 13:00:46"
+        }
     }
 }

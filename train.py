@@ -3,7 +3,7 @@ import datetime
 import numpy as np
 import pandas as pd
 from helper import update_baseline_metadata
-from sklearn.preprocessing import OneHotEncoder, StandardScaler,RobustScaler, MinMaxScaler, PolynomialFeatures, FunctionTransformer
+from sklearn.preprocessing import OneHotEncoder, StandardScaler, RobustScaler, MinMaxScaler, PolynomialFeatures, FunctionTransformer
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 from sklearn.linear_model import Ridge, LassoCV

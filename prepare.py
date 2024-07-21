@@ -93,14 +93,11 @@ def calculate_direction(row):
     
     return bearing
 
-
-# 3 Manhattan Distance
 def manhattan_distance(row):
-    # Convert the latitude and longitude differences to distances
+   
     lat_distance = abs(row['pickup_latitude'] - row['dropoff_latitude']) * 111  # approx 111 km per degree latitude
     lon_distance = abs(row['pickup_longitude'] - row['dropoff_longitude']) * 111 * math.cos(math.radians(row['pickup_latitude']))  # adjust for latitude
     
-    # Manhattan distance is the sum of the latitudinal and longitudinal distances
     return lat_distance + lon_distance
 
 
@@ -170,22 +167,22 @@ if __name__ == "__main__":
     df_val.reset_index(drop=True, inplace=True)
 
     # From our EDA, we need to use remove outliers from passenger_count and seems distance_km is necessary also.
-    # categorical_features = ['vendor_id', 'passenger_count',  "pickup_hour", "pickup_day", "pickup_dayofweek","pickup_month","pickup_Season",'store_and_fwd_flag']
+    categorical_features = ['vendor_id', 'passenger_count',  "pickup_hour", "pickup_day", "pickup_dayofweek","pickup_month","pickup_Season",'store_and_fwd_flag']
 
-    # threshold = 5
-    # df_train = delete_infrequent_categories(df_train, categorical_features, threshold=threshold)
-
-
-    # features_with_outliers = [
-    #                             {'categorical_features':categorical_features, "method": 'clip' , 'threshold':threshold},                                     
-    #                          ]
-
-    # for dict_feature in features_with_outliers:
-    #         if 'categorical_features' in dict_feature.keys(): continue
-    #         df_train = remove_outliers(df_train, 'trip_duration', dict_feature['feature'], method=dict_feature['method'] , factor=dict_feature['factor'])
+    threshold = 5
+    df_train = delete_infrequent_categories(df_train, categorical_features, threshold=threshold)
 
 
-    id = 0 # id for each version dataset splitm
+    features_with_outliers = [
+                                {'categorical_features':categorical_features, "method": 'clip' , 'threshold':threshold},                                     
+                             ]
+
+    for dict_feature in features_with_outliers:
+            if 'categorical_features' in dict_feature.keys(): continue
+            df_train = remove_outliers(df_train, 'trip_duration', dict_feature['feature'], method=dict_feature['method'] , factor=dict_feature['factor'])
+
+
+    id = 1 # id for each version dataset splitm
     directory = f'processed_data/{id}'
 
     if not os.path.exists(directory):
@@ -197,12 +194,12 @@ if __name__ == "__main__":
     # Save metadata
     metadata = {
         'version': id,
-        'version_description': "This version have all rows without any outlier removal.",
+        'version_description': "Just removed the infrequent item for categorical data.",
         'feature_names': df_train.columns.tolist(),
         'num_rows_train': len(df_train),
         'num_rows_val': len(df_val),
         'outlier_pipeline': 
-         None
+         features_with_outliers
         ,
         'timestamp': datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     }

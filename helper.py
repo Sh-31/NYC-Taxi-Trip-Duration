@@ -3,7 +3,6 @@ import json
 import joblib
 import zipfile
 
-
 def zip_files(files, output_path):
     with zipfile.ZipFile(output_path, 'w', zipfile.ZIP_DEFLATED) as zipf:
         for file in files:

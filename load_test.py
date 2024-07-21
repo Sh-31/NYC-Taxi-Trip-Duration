@@ -43,6 +43,8 @@ if __name__ == "__main__":
     training_features = modeling_pipeline['selected_feature_names']
     model = modeling_pipeline['model']
 
+    # Uncomment to try train dataset
+
     # df_train = pd.read_csv(train_path)
     # df_train = prepare_data(df_train)
     # df_train_processed = data_preprocessor.transform(df_train[training_features])
@@ -52,6 +54,8 @@ if __name__ == "__main__":
     df_val = prepare_data(df_val)
     df_vail_processed = data_preprocessor.transform(df_val[training_features])
     rmse, r2, _  = predict_eval(model, df_vail_processed, df_val[target] ,'vail')
+
+    # Uncomment to try test dataset
 
     # df_test = pd.read_csv(test_path)
     # df_test = prepare_data(df_test)
