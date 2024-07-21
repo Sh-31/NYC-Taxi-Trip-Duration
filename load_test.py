@@ -31,9 +31,9 @@ def prepare_data(df_test:pd.DataFrame):
 
 if __name__ == "__main__":
 
-    train_path = "split/train.csv"
-    val_path   = "split/val.csv" # "split/val.zip"
-    test_path  = "split/test.csv"
+    train_path = "split/train.zip" # "split/train.csv"
+    val_path   = "split/val.zip"   # "split/val.csv"
+    test_path  = "split/test.zip"  # "split/test.csv"
     model_path = "model_2024_07_20_14_34_Train_RMSE_0.44_R2_0.70_Test_RMSE_0.44_R2_0.69.pkl"
 
     LogFeatures = FunctionTransformer(log_transform, feature_names_out=with_suffix)
