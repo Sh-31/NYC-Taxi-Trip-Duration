@@ -162,10 +162,11 @@ def add_speed(df, speed_data_preprocessor, model=None, train_or_predict="train",
 
 if __name__ == "__main__":
     data_version = 0
-
+    # NOTE: if did not unzip the data you can replace the .csv with .zip should be work
     data_path =  f"processed_data/{data_version}"
-    train_path = f"{data_path}/train.csv"
-    val_path =   f"{data_path}/val.csv"
+    train_path = f"{data_path}/train.zip" # f"{data_path}/train.zip"
+    val_path =   f"{data_path}/val.zip"   # f"{data_path}/val.zip"
+
 
     df_train = pd.read_csv(train_path)
     df_val =   pd.read_csv(val_path)

@@ -125,8 +125,9 @@ def marge_spilite(df_train , df_test):
 
 
 if __name__ == "__main__":
-    df_train = pd.read_csv('split/train.csv')
-    df_val = pd.read_csv('split/val.csv')
+    # NOTE: if did not unzip the data you can replace the .csv with .zip should be work
+    df_train = pd.read_csv('split/train.csv') # 'split/train.zip'
+    df_val = pd.read_csv('split/val.csv')     # 'split/val.zip'  
 
     df_train['trip_duration'] = np.log1p(df_train['trip_duration'])
     df_val['trip_duration']  = np.log1p(df_val['trip_duration'])

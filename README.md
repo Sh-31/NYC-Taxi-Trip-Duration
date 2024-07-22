@@ -4,7 +4,8 @@ This project aims to predict the total ride duration of taxi trips in New York C
 
 ## Dependencies
 ```shell
-pip install -r requirements.txt
+pip install -r requirements.txt  (for Windows)
+pip3 install -r requirements.txt (for Linax)
 ```
 ## Usage
 ```shell
