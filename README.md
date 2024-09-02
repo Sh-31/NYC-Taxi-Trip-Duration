@@ -4,14 +4,12 @@ This project aims to predict the total ride duration of taxi trips in New York C
 
 ## Dependencies
 ```shell
-pip install -r requirements.txt  (for Windows)
-pip3 install -r requirements.txt (for Linax)
+pip3 install -r requirements.txt
 ```
 ## Usage
 ```shell
 cd  NYC-Taxi-Trip-Duration
-python load_test.py (for Windows)
-python3 load_test.py (for Linax)
+python3 load_test.py
 ```
 ## Repo structure and File descriptions
 ```
